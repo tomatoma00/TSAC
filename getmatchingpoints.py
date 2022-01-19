@@ -23,7 +23,7 @@ def siftandgetlocation(img1,img2,goodflag=1):
     # Apply ratio test
     good = []
     for m, n in matches:
-        if m.distance < 0.92 * n.distance:
+        if m.distance < 0.7 * n.distance:
             good.append(m)
     print('num of matching points', len(good))
 
