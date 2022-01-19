@@ -16,7 +16,7 @@ def ransacp(good, kp1, kp2,p,oldkp1,oldkp2):
     indexlist=[]
     '''for m in good:
         indexlist.append([m.queryIdx,m.trainIdx])'''
-    maxiter = 200
+    maxiter = 200 # in OpenCV, the default value of maxiter is 1000
     while True:
         time=time+1
         M = getpro.samplep(score)
