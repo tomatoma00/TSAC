@@ -10,7 +10,7 @@ img2 = cv2.imread('02.png', 0)
 Hlist = [[1 ,0, -20],[0, 1, -569],[0 ,0 ,1]]
 H = np.array(Hlist)
 result = getmatchingpoints.siftandgetlocation(img1, img2, 1)
-print('it start, you should close the window of image so that the process can continue')
+
 good = result[0]
 kp1 = result[1]
 kp2 = result[2]
@@ -25,8 +25,6 @@ sim = result1[1]
 topo.drawdel(points1, sim, img1)
 topo.drawdel(points2, sim, img2)
 
-print('-now, you should wait for sometime, the run time for calculation of cross is little long, \n because  the '
-      'calculation of cross has not optimized')
 p = topo.gettimes2(sim, points2)
 newkp1, newkp2 = getmatchingpoints.getnewkp(good, kp1, kp2)
 
