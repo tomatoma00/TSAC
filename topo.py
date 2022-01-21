@@ -47,9 +47,9 @@ def drawdel(points, sim, img1):
 # get average cross time
 def gettimes2(sim,points2):
      edges = []
-    edgenum = np.ones((len(points2)))
-    prob = np.zeros((len(points2)))
-    newprob = np.zeros((len(points2)))
+    edgenum = [1 for i in range(0,len(points2))]
+    prob = [0 for i in range(0,len(points2))]
+    newprob = [0 for i in range(0,len(points2))]
     for s in sim:
         edge = [min(s[0],s[1]),max(s[0],s[1])]
         if not edge in edges:
